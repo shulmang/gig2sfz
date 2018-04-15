@@ -109,9 +109,15 @@ void convert_gig_region(gig::Region* region, ostream& sfz)
 						start_bit += 1;
 						}
 					break;
-
+				case gig::dimension_samplechannel:
+	        cout << "Warning: unsupported dimension type encountered: dimension_samplechannel" << endl;
+					break;
+				case gig::dimension_roundrobin:
+	        cout << "Warning: unsupported dimension type encountered: dimension_roundrobin" << endl;
+					break;
 				default:
-					throw RIFF::Exception("Unsupported dimension type.");
+	        cout << "Warning: unsupported dimension type encountered: ";
+	        cout << dim_def->dimension << endl;
 					break;
 				}
 			}
