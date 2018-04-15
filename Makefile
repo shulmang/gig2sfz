@@ -8,10 +8,9 @@ SRCS := main.cpp
 default: $(BIN)
 
 $(BIN): $(SRCS)
-	$(CXX) $^ -o $@ $(CFLAGS) -lgig
+	$(CXX) $^ -o $@ $(CFLAGS) -L/usr/local/lib/libgig -lgig
 
 .PHONY: test
 test: $(BIN)
 	$(BIN) wurlitzer_ep200.gig
 	vim "Wurlitzer EP200.sfz"
-

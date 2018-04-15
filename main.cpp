@@ -1,4 +1,4 @@
-#include "gig.h"
+#include "/usr/local/Cellar/libgig/4.1.0/include/libgig/gig.h"
 #include <string>
 #include <fstream>
 #include <math.h>
